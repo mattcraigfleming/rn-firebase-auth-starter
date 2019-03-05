@@ -30,6 +30,7 @@ export default class Login extends React.Component {
         />
         <Button title="Login" onPress={this.handleLogin} />
         <Button
+          color="#841584"
           title="Don't have an account? Sign Up"
           onPress={() => this.props.navigation.navigate('SignUp')}
         />

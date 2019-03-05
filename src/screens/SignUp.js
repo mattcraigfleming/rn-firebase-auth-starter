@@ -9,7 +9,7 @@ export default class SignUp extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Sign Up</Text>
+        <Text>Sign Up Form</Text>
         {this.state.errorMessage && (
           <Text style={{ color: 'red' }}>{this.state.errorMessage}</Text>
         )}
@@ -30,6 +30,7 @@ export default class SignUp extends React.Component {
         />
         <Button title="Sign Up" onPress={this.handleSignUp} />
         <Button
+          color="#841584"
           title="Already have an account? Login"
           onPress={() => this.props.navigation.navigate('Login')}
         />
