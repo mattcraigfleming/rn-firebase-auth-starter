@@ -5,7 +5,7 @@ class Splash extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Splash</Text>
+        <Text style={{ color: 'black' }}>Splash</Text>
         <ActivityIndicator size="large" />
       </View>
     )
