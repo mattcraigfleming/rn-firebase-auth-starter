@@ -7,7 +7,7 @@ target 'gsDemo' do
 
   # Pods for gsDemo
   pod 'Firebase/Core'
-
+  pod 'Firebase/Auth'
 
 
 
