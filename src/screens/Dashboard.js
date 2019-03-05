@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Platform, Image, Text, View } from 'react-native'
+import { StyleSheet, Button, Image, Text, View } from 'react-native'
 import firebase from 'react-native-firebase'
 
 export default class Dashboard extends React.Component {
@@ -8,11 +8,21 @@ export default class Dashboard extends React.Component {
     const { currentUser } = firebase.auth()
     this.setState({ currentUser })
   }
+  signOutUser = async () => {
+    const { navigate } = this.props.navigation
+    try {
+      await firebase.auth().signOut()
+      navigate('Splash')
+    } catch (e) {
+      console.log(e)
+    }
+  }
   render() {
     const { currentUser } = this.state
     return (
       <View style={styles.container}>
-        <Text>Hi {currentUser && currentUser.email}!</Text>
+        <Text>Hi 👋 {currentUser && currentUser.email}!</Text>
+        <Button title="Sign Out" onPress={() => this.signOutUser()} />
       </View>
     )
   }

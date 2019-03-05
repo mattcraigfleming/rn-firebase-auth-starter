@@ -8,9 +8,9 @@ import Dashboard from '../screens/Dashboard'
 
 const AppNavigator = createStackNavigator(
   {
+    Splash,
     SignUp,
     Login,
-    Splash,
     Dashboard
   },
   { headerMode: 'modal' },

@@ -5,7 +5,7 @@ import firebase from 'react-native-firebase'
 class Splash extends React.Component {
   componentDidMount() {
     firebase.auth().onAuthStateChanged(user => {
-      this.props.navigation.navigate(user ? 'Dashboard' : 'SignUp')
+      this.props.navigation.replace(user ? 'Dashboard' : 'SignUp')
     })
   }
   render() {
